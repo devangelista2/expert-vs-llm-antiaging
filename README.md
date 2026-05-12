@@ -2,8 +2,6 @@
 
 This repository contains the reproducible analysis code for the expert-vs-LLM evaluation study on anti-aging supplement recommendations. The analysis is based on the assessment workbook in [`data/RecsAssessByExperts2025.xlsx`](data/RecsAssessByExperts2025.xlsx), and the paper draft included in this repository is kept as the primary study reference:
 
-- [`20250419_CKI_AgenExperimentDesign (2).pdf`](20250419_CKI_AgenExperimentDesign%20(2).pdf)
-
 ## Repository layout
 
 ```text
@@ -65,17 +63,3 @@ By default, generated CSV tables and PNG figures are written to `outputs/`.
 - The analysis expects the `Answers` sheet structure found in the provided workbook.
 - Rating columns are discovered by stable column prefixes rather than hard-coded full header strings.
 - The repository preserves the original one-file entry point, but the actual implementation now lives in `src/antiaging_experiments/`.
-
-## Development
-
-Run tests with:
-
-```bash
-pytest
-```
-
-Run a syntax-only smoke check with:
-
-```bash
-python -m compileall src tests reproduce_tables.py
-```
